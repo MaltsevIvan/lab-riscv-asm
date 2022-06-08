@@ -44,17 +44,23 @@ void findMax (stack stack, int *max_x, int *max_y) {
 
 int main () {
   int max_x, max_y;
-	int mass[] = 
+	int array[] = 
   {
-    1, 8, 3, 2,
-	  4, 2, 55, 6,
-	  6, 4, 2, 7
+    5, 9, 3, 6,
+	  8, 2, 55, 6,
+	  87, 4, 2, 45
+  };
+  int array2[] = 
+  {
+    1, 5, 3, 6,
+	  8, 7, 45, 6,
+	  87, 234, 2, 45
   };
   stack stack;
   stack.size = 0;
   for (int i = 0; i < M; i++) {
     for (int j = 0; j < N; j++) {
-      push(&stack, mass[i * N + j]);
+      push(&stack, array[i * N + j]);
     }
   }
   findMax(stack, &max_x, &max_y);
